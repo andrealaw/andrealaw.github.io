@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		getCurrentWeather();
+
+		var $changeTempUnitButton = $("#changeTempUnitButton");
+		$changeTempUnitButton.click(function() {
+			if ($changeTempUnitButton.html() == "View in Fahrenheit (°F)") {
+				getCurrentWeather("F");
+			} else {
+				getCurrentWeather("C");    		
+			}
+		});
+
+		$( window ).resize(function() {
+			setBackgroundImageSize();
+		});
+	});
+	/*
+	Update the temperature based on param
+	tempUnit = 
+		"C" for degree Celsius OR
+		"F" for Fahrenheit
+	*/
+		function getCurrentWeather(tempUnit) {
+	// Assign handlers immediately after making the request,
+	// and remember the jqXHR object for this request
+
+	var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?id=1819729&appid=d01271952de2337d65616474665dc5ae";
+	var unitArr = {
+		C: {api: "&units=metric", symbol: " °C", text: "View in Fahrenheit (°F)"},
+		F: {api: "&units=imperial", symbol: " °F", text: "View in Celsius (°C)"}
+	}
+
+    //var $tempUnit = $("#tempUnit");
+    var $location = $("#location");
+    var $temp = $("#temperature");
+    var $changeTempUnitButton = $("#changeTempUnitButton");
+    var unit = "";
+    var args = Array.from(arguments);
+    if (args == "") {
+    	unit = "C";
+    } else {
+    	unit = tempUnit;
+    }
+    //console.log(unit);
+
+    weatherAPI += unitArr[unit].api;
+
+    var jqxhr = $.ajax({
+    	url: weatherAPI,
+    	dataType: "jsonp"
+    })
+    .done(function(json) {
+	    //console.log( "success" );
+	    $location.html(json.name);
+	    $("#icon").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+	    $temp.html(json.main.temp + '<span class="unit">' + unitArr[unit].symbol + '</span>');
+	    $changeTempUnitButton.html(unitArr[unit].text);
+	    getBackgroundImage();
+	})
+    .fail(function(errorMsg) {
+	    //console.log("Error message: " + errorMsg);
+	    //console.log( "error" );
+	})
+    .always(function() {
+	    //console.log( "complete" );
+	});
+}
+function getBackgroundImage() {
+	var today = new Date();
+	var hours = today.getUTCHours() + 8;
+	if (hours > 23) {
+		hours -= 24;
+		today.setUTCDate(today.getUTCDate() + 1);
+	}
+	var year = today.getUTCFullYear();
+	var month = today.getUTCMonth() + 1;
+	var day = today.getUTCDate();
+
+	var minutes = today.getUTCMinutes();
+	minutes = Math.floor(minutes / 10) * 10;
+	switch(minutes) {
+		case 0:
+			hours -= 1;
+			minutes = 50;
+			break;
+		default:
+			minutes -= 10;
+			break;
+
+	}
+
+	function checkFormat(num) {
+	  // for year
+	  if (num > 2000) {
+	  	num = num - 2000;
+	  }
+	  // for other date items
+	  if (num < 10) {
+	  	return "0" + num.toString();
+	  }
+	  return num.toString();
+	}
+
+	var pic = 'url("http://www.hko.gov.hk/wxinfo/aws/hko_mica/vpa/imgVPA_';
+		pic += checkFormat(year);
+		pic += checkFormat(month);
+		pic += checkFormat(day);
+		pic += '_' + checkFormat(hours) + checkFormat(minutes);
+		pic += '.jpg")';
+	//console.log(pic);
+	$("body").css("background-image", pic);
+	if (hours > 19 || hours < 5) {
+		$(".text-color").css("color", "#FFF");
+	}
+	setBackgroundImageSize();
+}
+/* 
+Set height of background image to match size of the window
+*/
+function setBackgroundImageSize() {
+	height = $( window ).height() * 1.1;
+	//console.log("height = " + height);
+	$("body").css("background-size", "auto " + height + "px");
+}
+</script>
+<style>
+body {
+	background-image: url("http://www.hko.gov.hk/wxinfo/aws/hko_mica/vpa/imgVPA_170503_1310.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 800px;
+	background-position: 50% 10%;
+
+}
+.container {
+	padding-top: 10%;
+}
+img, .btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.text-color {
+	color: #000;
+}
+p#location {
+	font-size: x-large;
+	font-weight: 200;
+}
+p#temperature {
+	font-size: 60px;
+	font-weight: 800;
+}
+span.unit {
+	font-size: 25px;
+	vertical-align: text-top;
+}
+p.footer {
+	margin-top: 100px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<img id="icon">
+		<p id="location" class="text-center text-color">Loading country...</p>
+		<p id="temperature" class="text-center text-color">Loading temperature...</p>
+		<button id="changeTempUnitButton" class="btn">View in Fahrenheit (°F)</button>
+		<p class="footer text-center text-color">Made with ❤ by Andrea</p>
+	</div>
+</body>
+</html>
