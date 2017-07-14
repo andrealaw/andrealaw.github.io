@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		var searchTerm = "";
+		//searchEntry();
+		$("input").keydown(function(event) {
+			searchTerm = $("input[name=search]").val();
+			//console.log(searchTerm);
+			if (event.which == 13) {
+				event.preventDefault();
+				//console.log("Enter pressed");
+				searchEntry(searchTerm);
+			}
+		});
+
+		$("div.title").click(function() {
+			reset();
+		});
+
+		$("#reset").click(function() {
+			reset();
+		});
+
+
+	});
+	
+	function reset() {
+		$("input[name=search]").val("");
+		$("#results").html("");
+		$("#searchArea").removeClass("shift");
+	}
+
+	function searchEntry(t) {
+		var term = t.replace(/\s/g, '%20');
+	//console.log(t); // unchanged
+	console.log(term); // changed: space replaced with "%20"
+	
+	$.ajax({
+		// sample url = "https://en.wikipedia.org/w/api.php?action=query&generator=search&utf8=1&gsrsearch=Einstein&prop=extracts&exintro=1&exlimit=20&exchars=200"
+		url: 'https://en.wikipedia.org/w/api.php?',
+		data: {
+			action: 'query',
+			generator: 'search',
+			utf8: '1',
+			format: 'json',
+			gsrsearch: term,
+			prop: 'extracts',
+			exintro: '1',
+			exlimit: '20',
+			exchars: '300'
+		},
+		dataType: 'jsonp',
+	})
+	.done(function(data) {
+		//console.log( "success" );
+		//console.log(data);
+		var obj = data.query.pages;
+		var pageids = Object.keys(obj); // get pageids
+
+		//console.log(pageids);
+		var html = "";
+		html += '<p>Display the top ' + pageids.length + ' relevant Wikipedia entries:</p>';
+		//console.log(obj[pageids[0]]);
+		for (var i = 0; i < pageids.length; i++) {
+			var pageid = obj[pageids[i]].pageid;
+			//console.log(pageid);
+			var title = obj[pageids[i]].title;
+			//console.log(title);
+			var extract = obj[pageids[i]].extract;
+			//console.log(extract);
+			//html += '<hr>';
+			html += '<div class="divBox">';
+			html += '<p class="title">' + title + '</p>';
+			html += '<a class="divLink" href="https://en.wikipedia.org/?curid=' + pageids[i] + '" alt="' + title + '" target="_blank"></a>';
+			html += '<div class="extract">' + extract + '</div>';
+			html += '</div>';
+			
+		}
+		//console.log(html);
+		$("#searchArea").addClass("shift");
+		$("#results").html(html);
+
+	})
+	.fail(function(errorMsg) {
+	    //console.log("Error message: " + errorMsg);
+	    //console.log( "error" );
+	})
+	.always(function() {
+	    //console.log( "complete" );
+	});
+}
+
+</script>
+<style>
+body {
+	background-color: #f3f3f3;
+}
+div#searchArea {
+    margin-top: 20%;
+}
+div#randomEntryArea {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+input[type=text] {
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	border-right: 0px;
+	font-size: 16px;
+	background-color: #FFF;
+	background-repeat: no-repeat;
+	padding: 6px 10px 6px 10px;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+}
+
+h1.title {
+	font-weight: 200;
+	padding-bottom: 3%;
+	text-align: center;
+	font-size: 36px;
+	cursor: pointer;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+#searchArea.shift {
+    margin-top: 0%;
+    -webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+#searchArea.shift h1.title {
+	padding-bottom: 1%;
+	font-size: 24px;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+#searchArea.shift div#randomEntryArea {
+    display: none;
+}
+
+p.or {
+	text-align: center;
+}
+
+.btn, input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+span#reset {
+    border: 1px solid #ccc;
+    border-left: 0px;
+    cursor: pointer;
+}
+#results {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#results div.divBox {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #FFF;
+    background-color: #FFF;
+    margin-top: 10px;
+}
+
+#results div.divBox:hover {
+	border-left-width: 5px;
+	padding-left: 15px;
+	border-left-color: #97c7e8;
+}
+
+.divBox {
+    position: relative;
+    margin: auto;
+}
+a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-decoration: none;
+    z-index: 10;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+p.title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 200;
+}
+div.extract p {
+	text-align: left;
+}
+b, strong {
+    font-weight: 200;
+    background-color: #f1f1af;
+}
+</style>
+<title>Wikipedia Viewer</title>
+</head>
+<body>
+	<div class="container">
+		<div id="searchArea">
+		<div class="title"><h1 class="title">Get a Wikipedia Entry</h1>
+	</div>
+		<div class="input-group" onsubmit={this.saveAndContinue}>
+			<input type="text" name="search" class="form-control" placeholder="Type here and press Enter to search">
+			<span id="reset" class="input-group-addon" >×</span>
+		</div>
+		<div id="randomEntryArea">
+			<p class="or">OR</p>
+				<button id="randomEntryButton" class="btn divBox btn-primary">Get a Random entry<a href="https://en.wikipedia.org/wiki/Special:Random" alt="Press to get a random entry on Wikipedia" target="_blank" class="divLink"></a></button>
+		</div>
+	</div>
+		<div id="results">
+		</div>
+	</div>
+</body>
+</html>
