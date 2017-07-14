@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		getStreamerInfo();
+		$("#all").click(function() {
+			console.log("All button clicked");
+			$(this).addClass("btn-primary");
+			$("#online, #offline").removeClass("btn-primary");
+			$(".online, .offline").removeClass("hidden");
+		});
+		$("#online").click(function() {
+			console.log("Online button clicked");
+			$(this).addClass("btn-primary");
+			$("#all, #offline").removeClass("btn-primary");
+			$(".online").removeClass("hidden");
+			$(".offline").addClass("hidden");
+		});
+		$("#offline").click(function() {
+			console.log("Offline button clicked");
+			$(this).addClass("btn-primary");
+			$("#all, #online").removeClass("btn-primary");
+			$(".offline").removeClass("hidden");
+			$(".online").addClass("hidden");
+		});
+		
+	});
+	function getStreamerInfo(name) {
+		var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin"];
+  		$("#table-content").append(addTable("Logo", "Streamer", "Status", "Channel"));
+
+		channels.forEach(function(channel) 
+		{
+			$.getJSON(getLink("users", channel), function(data) 
+			{	
+				if (data.error) {
+					console.log(channel, "is not a valid user");
+					return;
+				}
+				var logo = getLogo(data.logo, channel);
+				var name = channel;
+				var status = "";
+				var link = '<a href="https://www.twitch.tv/' + channel + '">https://www.twitch.tv/' + channel + '</a>';
+				var game = "";
+				var screen = "";
+				$.getJSON(getLink("streams", name), function(data) 
+				{
+					//console.log(data);
+					if (data.stream === null) {
+						status = "Offline";
+					} else {
+						status = "Online";
+						if (data.stream.game) {
+							game = data.stream.game;
+							screen = data.stream.preview.large;
+							link += '<br><p class="game">Now showing: <br><span>' + game + '</span></p><img src="' + screen + '">';
+						}
+					}
+					$("tbody").append(addTableRow(logo, name, status, link));
+				});
+			});
+			
+		});	
+	}
+
+	function getStatus(name) {
+
+		$.getJSON(getLink("streams", name), function(data) {
+			console.log(data);
+			if (data.stream === null) {
+				console.log("Offline");
+				return "Offline";
+			} else {
+				console.log("Online");
+				return "Online";
+			}
+		});
+	}
+	function getLink(type, name) {
+		return 'https://wind-bow.glitch.me/twitch-api/' + type + '/' + name + '?callback=?';
+	}
+	function getLogo(url, name) {
+		return '<img src="' + url + '" alt="Logo of ' + name + '" class="logo">';
+	}
+	function addTable(h1, h2, h3, h4) {
+		var html = '<table class="table table-inverse"><thead>';
+ 		html += '<th>' + h1 + '</th>';
+      	html += '<th>' + h2 + '</th>';
+      	html += '<th>' + h3 + '</th>';
+      	html += '<th>' + h4 + '</th>';
+  		html += '</thead><tbody></tbody></table>';
+  		return html;
+	}
+	function addTableRow(c1, c2, c3, c4) {
+		var html = '';
+		html += '<tr class="' + c3.toLowerCase() + '">';
+      	html += '<td>' + c1 + '</td>';
+      	html += '<td>' + c2 + '</td>';
+      	html += '<td>' + c3 + '</td>';
+      	html += '<td>' + c4 + '</td>';
+    	html += '</tr>';
+  		return html;
+	}
+	function closeTable() {
+  		return '</tbody></table>';
+	}
+
+	</script>
+	<style type="text/css">
+		img.logo {
+    width: 100px;
+}
+	</style>
+	<title>Twitchtv Streamers</title>
+</head>
+<body>
+<div class="container">
+<h1>Twitchtv Streamers</h1>
+<button id="all" class="btn btn-primary">All</button>
+<button id="online" class="btn">Online</button>
+<button id="offline" class="btn">Offline</button>
+<div id="table-content"></div>
+</div>
+</body>
+</html>
