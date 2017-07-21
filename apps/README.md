@@ -1,4 +1,5 @@
-# Summary
+# Summary of Web apps
+Here is a summary of Web app projects in this directory.
 
 ## ageteller
 A React app that takes a date as input and display the number of years, months and days between the current date and the date entered
