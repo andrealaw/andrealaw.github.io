@@ -1,5 +1,8 @@
 /**
-Learn Java data types: int
+    Learn Java data types: 
+    - int
+    - boolean
+    - char
  */
 public class DataTypes {
 	public static void main(String[] args) {
@@ -16,7 +19,15 @@ public class DataTypes {
         /**
         Datatype: boolean
         - a data type that can only be either true or false
-         */
-         System.out.println(false);
+        */
+        System.out.println(false);
+
+         /**
+        Datatype: char
+        - is short for character
+        - can represent a single character
+        - must be enclosed in single quotes, like this: 'G'
+        */
+        System.out.println('M');
 	}
 }
