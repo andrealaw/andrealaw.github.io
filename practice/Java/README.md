@@ -1,4 +1,4 @@
-# A summary of files in this directory
+# A summary of Java practice
 
 ## Introduction to Java
 Learn primitive data types and Java syntax
@@ -19,4 +19,8 @@ Learn how to use control flow and conditional statements in Java.
 - **And.java**: Learn the "and" Boolean operator
 - **Or.java**: Learn the "or" Boolean operator
 - **Not.java**: Learn the "not" Boolean operator
-
+- **Precedence.java**: Learn Boolean operator precedence
+- **If.java**: Learn the if statement
+- **IfElse.java**: Learn if/else statements
+- **IfElseIf.java**: Learn the if/else if/else statement
+- **Ternary.java**: Learn the ternary conditional statement
