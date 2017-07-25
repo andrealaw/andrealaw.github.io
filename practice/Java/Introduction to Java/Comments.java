@@ -1,5 +1,10 @@
 /*
+
 Learn two types of comments: single line and multi-line
+
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Comments {

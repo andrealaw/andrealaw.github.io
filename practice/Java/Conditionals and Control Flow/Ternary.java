@@ -17,6 +17,9 @@ These three parts are:
 2. A single statement that gets executed if the Boolean expression is true
 3. A single statement that gets executed if the Boolean expression is false
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Ternary {

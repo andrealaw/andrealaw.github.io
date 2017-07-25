@@ -6,6 +6,9 @@ Learn the "or" Boolean operator
 - It returns a Boolean value of true 
 - when at least one expression on either side of || is true
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Or {

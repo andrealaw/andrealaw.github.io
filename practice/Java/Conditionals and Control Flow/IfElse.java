@@ -12,6 +12,9 @@ if (1 < 3 && 5 < 4) {
     System.out.println("You can thank George Boole!");
 }
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class IfElse {

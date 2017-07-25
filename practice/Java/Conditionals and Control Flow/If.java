@@ -13,6 +13,9 @@ The if statement
 - is not followed by a semicolon (;)
 - uses curly braces ({ and }) to surround the code block that gets run when the Boolean expression is true
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class If {

@@ -1,7 +1,13 @@
-/**
- Learn variables
- - a variable stores a value
- - all variables must have a specified data type
+/*
+
+Learn variables
+
+- a variable stores a value
+- all variables must have a specified data type
+
+Practice from
+Codecademy: https://www.codecademy.com/
+
  */
 public class Variables {
 	public static void main(String[] args) {

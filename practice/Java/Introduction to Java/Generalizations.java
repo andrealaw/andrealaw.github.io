@@ -1,6 +1,7 @@
 /*
 
 Summary of building blocks of Java programming
+
 - Data Types are int, boolean, and char
 - Variables are used to store values
 - Whitespace helps make code easy to read for you and others
@@ -8,6 +9,9 @@ Summary of building blocks of Java programming
 - Arithmetic Operators include +, -, *, /, and %
 - Relational Operators include <, <=, >, and >=
 - Equality Operators include == and !=
+
+Practice from
+Codecademy: https://www.codecademy.com/
 
 */
 

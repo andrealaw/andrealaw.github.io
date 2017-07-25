@@ -1,6 +1,7 @@
 /*
 
 Learn the relational operators
+
 - compare data types that have a defined ordering
 - like numbers (since numbers are either smaller or larger than other numbers)
 - always return a boolean value of true or false
@@ -15,6 +16,9 @@ Examples:
 A relational operator is placed between the two operands (the terms that you want to compare using the relational operator):
 
 System.out.println(5 < 7);      // return true
+
+Practice from
+Codecademy: https://www.codecademy.com/
 
 */
 

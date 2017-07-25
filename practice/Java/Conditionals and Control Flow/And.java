@@ -1,9 +1,13 @@
 /*
 
 Learn the "and" Boolean operator
+
 - The and operator is represented in Java by &&
 - returns a boolean value of true 
 - only when the expressions on both sides of && are true
+
+Practice from
+Codecademy: https://www.codecademy.com/
 
 */
 public class And {

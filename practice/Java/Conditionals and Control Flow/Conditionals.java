@@ -7,6 +7,9 @@ About control flow in Java programming
 - can also follow different sets of instructions 
 - depending on the values that we provide to them
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Conditionals {

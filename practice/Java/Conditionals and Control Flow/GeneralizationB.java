@@ -23,7 +23,10 @@ Task 2. Change the Boolean expression in the if statement so that your program w
 
 Task 3. Set the value of the int variable subwayTrain equal to the case that will print "This is a Brooklyn bound train!" to the console.
 
- */
+Practice from
+Codecademy: https://www.codecademy.com/
+
+*/
 
  public class GeneralizationsB {
 	public static void main(String[] args) {

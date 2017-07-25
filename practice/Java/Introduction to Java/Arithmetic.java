@@ -2,6 +2,9 @@
 
 Learn arithmetics - addition, subtraction, multiplication, division
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 public class Arithmetic {
 	public static void main(String[] args) {

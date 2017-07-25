@@ -24,3 +24,7 @@ Learn how to use control flow and conditional statements in Java.
 - **IfElse.java**: Learn if/else statements
 - **IfElseIf.java**: Learn the if/else if/else statement
 - **Ternary.java**: Learn the ternary conditional statement
+- **GeneralizationB.java**: Summary of conditionals and control flow
+
+## Source of practice
+- Codecademy: https://www.codecademy.com/

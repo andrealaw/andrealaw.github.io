@@ -1,9 +1,14 @@
-/**
-    Learn Java data types: 
-    - int
-    - boolean
-    - char
- */
+/*
+
+Learn Java data types: 
+- int
+- boolean
+- char
+
+Practice from
+Codecademy: https://www.codecademy.com/
+
+*/
 public class DataTypes {
 	public static void main(String[] args) {
 

@@ -10,6 +10,9 @@ The break statement
 - will exit the switch statement after a condition is met
 - stop Java to check whether the value matches any other cases
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Switch {

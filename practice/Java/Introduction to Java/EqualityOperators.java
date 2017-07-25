@@ -8,6 +8,9 @@ Equality operators:
 ==  equal to
 !=  not equal to
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class EqualityOperators {

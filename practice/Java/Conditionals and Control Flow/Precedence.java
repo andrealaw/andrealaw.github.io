@@ -12,6 +12,9 @@ Learn Boolean operator precedence
 - Like numerical expressions, every expression within parentheses is evaluated first
 - Expressions are read from left to right
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Precedence {

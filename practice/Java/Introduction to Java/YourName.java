@@ -1,4 +1,12 @@
-// Learn how to print text
+/*
+
+Learn how to print text
+
+Practice from
+Codecademy: https://www.codecademy.com/
+
+*/
+
 public class YourName {
 	public static void main(String[] args) {
 

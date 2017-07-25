@@ -7,6 +7,9 @@ Learn the "not" Boolean operator
 - return false if the expression is true
 - return true if the expression is false
 
+Practice from
+Codecademy: https://www.codecademy.com/
+
 */
 
 public class Not {

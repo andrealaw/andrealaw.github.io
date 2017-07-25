@@ -12,3 +12,6 @@
 ## Projects
 - **fifteen**: Implement Game of Fifteen (generalized to d x d)
 - **find**: Prompt user for as many as MAX values until EOF is reached, then proceed to search that "haystack" of values for given needle
+
+## Source of practice
+- CS50 by Harvard University @ edX
