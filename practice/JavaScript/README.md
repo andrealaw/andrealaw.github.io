@@ -1,5 +1,14 @@
 # A Summary of JavaScript practice
 
+# Basic JavaScript
+- **basic-algebra.js**: Demonstrate the use of console.time for measurement and comparison of execution time required by addition, subtraction, multiplication, and division
+
+# Basic Algorithm Scripting
+- **fibonacci.js**: 3 functions that each takes a number n and returns an array containing a Fibonacci sequence of length n
+- **is-prime.js**: A function to check if a number is prime
+- **palindromes.js**: A function that returns true if the given string is a palindrome. Otherwise, return false.
+- **reverse-an-array.js**: Use reverse to reverse the array variable and assign it to newArray
+
 ## Advanced Algorithm Scripting
 - **validate-us-telephone-numbers.js**: A function that returns true if the passed string is a valid US phone number.
 - **record-collection.js**: A function that updates a JSON object of a musical album collection.
