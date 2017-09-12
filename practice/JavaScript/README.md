@@ -20,5 +20,11 @@
 - **map-the-debris.js**: A function that returns a new array transforming the element's average altitude into their orbital periods.
 - **pairwise.js**: A function that takes an array arr, finds its element pairs whose sum equals to the second argument arg and return the sum of their indices.
 
-## Source of practice
-- freecodecamp: https://www.freecodecamp.org/
+## Code Challenges
+- Refer to the folder for details
+
+## Recommended source of practice
+- HackerRank
+- LeetCode
+- Project Euler
+- TopCoder
