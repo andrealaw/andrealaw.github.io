@@ -14,6 +14,7 @@
  * Approach 4: 0ms                 O(n) with one for loop
  * 
  * Written by: Andrea Law
+ * Date: 5 Aug 2017
  * 
  */
 

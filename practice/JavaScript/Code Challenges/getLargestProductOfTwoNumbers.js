@@ -5,6 +5,9 @@ Given a list of numbers, put with + - * / with any two numbers, find the maximum
 Time complexity:    O(n)
 Space complexity:   O(1)
 
+Solved by: Andrea Law
+Date: 9 Aug 2017
+
 */
 
 function getLargestProductOfTwo(arr) {

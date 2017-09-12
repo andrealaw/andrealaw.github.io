@@ -1,0 +1,46 @@
+/** 
+
+Examples:
+- bank queue
+- movie ticket purchasing
+- waiting for a table
+
+Solved by: Andrea Law
+Date: 20 Aug 2017
+
+*/
+
+function QueueTwoStacks() {
+  this.inStack = [];
+  this.outStack = [];
+}
+
+QueueTwoStacks.prototype.enqueue = function(item) {
+  this.inStack.push(item);
+}
+
+QueueTwoStacks.prototype.dequeue = function(item) {
+  if (this.outStack.length === 0) {
+    while (this.inStack.length > 0) {
+      var newInStackItem = this.inStack.pop();
+      this.outStack.push(newInStackItem);
+    }
+
+    if (this.outStack.length === 0) {
+      throw new Error("No items in the stacks to return.");
+    }
+  }
+
+  return this.outStack.pop();
+}
+
+// test cases:
+var queue = new QueueTwoStacks();
+//queue.dequeue(); // Error
+
+queue.enqueue("a");
+console.log(queue.inStack); // ["a"]
+
+queue.enqueue("b");
+queue.enqueue("c");
+queue.dequeue(); // "a"

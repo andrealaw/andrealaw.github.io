@@ -3,6 +3,10 @@
  * Execution time:
  * ES5-1: 1.89794921875ms   <- while loop + push() and unshift() to 3 arrays
  * ES5-2: 0.3759765625ms    <- while loop + add elements by positions to 1 array
+ * 
+ * Solved by: Andrea Law
+ * Date: 3 Aug 2017
+ * 
  */
 
 // ES5-1

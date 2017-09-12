@@ -1,7 +1,8 @@
 /*
 O(1) space and O(n log n) time.
 
-Written by: Andrea Law
+Solved by: Andrea Law
+Date: 14 Aug 2017
 */
 function findDuplicatedInteger(arr) {
 

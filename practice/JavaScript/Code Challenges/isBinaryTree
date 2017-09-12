@@ -1,6 +1,15 @@
 /*
+
+isBinaryTree primarily cares about 
+whether a binary tree is superbalanced
+where the depths between leaves are no more than one
+
 Time complexity: O(n) worst case
 Space complexity: O(n)
+
+Solved by: Andrea Law
+Date: 17 Aug 2017
+
 */
 function isBinaryTree(rootNode) {
   

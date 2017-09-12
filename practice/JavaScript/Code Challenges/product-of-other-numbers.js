@@ -1,5 +1,13 @@
-// Approach 1 with a brute force approach
-// Time complexity: O(n ^ 2)
+/*
+
+Approach 1 with a brute force approach
+
+Time complexity: O(n ^ 2)
+
+Solved by: Andrea Law
+Date: 6 Aug 2017
+
+*/
 
 function getProductsOfAllIntsExceptAtIndex (arr) {
     

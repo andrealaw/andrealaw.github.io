@@ -11,7 +11,8 @@
  * Source of practice
  * freecodecamp: https://www.freecodecamp.org/
  * 
- * Written by: Andrea Law
+ * Solved by: Andrea Law
+ * Date: 2 Aug 2017
  */
 
 function performOps(A){

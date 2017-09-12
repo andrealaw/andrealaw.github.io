@@ -11,6 +11,9 @@ Space complexity:	O(n)
 Edge cases:
 - empty string
 
+Solved by: Andrea Law
+Date: 20 Aug 2017
+
 */
 function isValid(str) {
 	

@@ -1,7 +1,9 @@
-/**
+/*
  * 
  * Write a function fib() that a takes an integer n and returns the nth fibonacci number.
  * 
+ * Solved by: Andrea Law
+ * Date: 4 Aug 2017
  */
 function getFibonacciNumber(n) {
     

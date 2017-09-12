@@ -12,6 +12,9 @@ Dynamic programming + bottom-up approach
 Time complexity: O(n)
 Space complexity: O(n)
 
+Solved by: Andrea Law
+Date: 15 Aug 2017
+
 */
 function getPossibleWaysOfChanges(value, denominations) {
   var waysOfChanges = [];

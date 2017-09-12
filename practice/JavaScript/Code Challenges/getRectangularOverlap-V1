@@ -5,6 +5,9 @@ getRectangularOverlap-V1
 Time complexity: O(1)
 Space complexity: O(1)
 
+Solved by: Andrea Law
+Date: 15 Aug 2017
+
 */
 
 function getRectangularIntersection(rectangle1, rectangle2) {

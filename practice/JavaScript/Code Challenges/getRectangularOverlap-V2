@@ -5,11 +5,14 @@ getRectangularOverlap-V2
 Time complexity: O(1)
 Space complexity: O(1)
 
+Solved by: Andrea Law
+Date: 22 Aug 2017
+
 */
 
-function getRangesOverlap(left1, length1, left2, length2) {
-  var highestStartPoint = Math.max(left1, left2);
-  var lowestEndPoint = Math.min(left1 + length1, left2 + length2);
+function getRangesOverlap(start1, length1, start2, length2) {
+  var highestStartPoint = Math.max(start1, left2);
+  var lowestEndPoint = Math.min(start1 + length1, start2 + length2);
 
   if (highestStartPoint >= lowestEndPoint) {
     return { startPoint: null, overlapLength: null};
@@ -29,7 +32,7 @@ function getRectangularOverlap(rectangle1, rectangle2) {
   var isXOverlap = getRangesOverlap(rectangle1.leftX, rectangle1.width, rectangle2.leftX, rectangle2.width);
   var isYOverlap = getRangesOverlap(rectangle1.bottomY, rectangle1.height, rectangle2.bottomY, rectangle2.height);
   
-  if (isXOverlap.length === null || isYOverlap.length === null) {
+  if (isXOverlap.overlapLength === null || isYOverlap.overlapLength === null) {
     return {
       leftX: null,
       bottomY: null,
