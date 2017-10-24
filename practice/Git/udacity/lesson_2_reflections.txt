@@ -1,0 +1,14 @@
+Q.What happens when you initialize a repository? Why do you need to do it?
+---
+A hidden file .git at the current working directory.
+It allows git to create an empty repository for commits.
+
+Q.How is the staging area different from the working directory and the repository? What value do you think it offers?
+---
+Staging area is used to store files to be committed in the same commit, which is also the next commit.
+Working directory is the directory where all working files are stored, whether
+they are staged or committed.
+Repository is a directory at Git, which stores commits(different versions) of selected files from my computer.
+
+Staging area allows users to have a clearer picture of files modified for the logical change of the commits.
+It also save space for duplicated copies of the same file that has no change across the commits.

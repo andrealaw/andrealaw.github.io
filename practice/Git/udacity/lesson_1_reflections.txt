@@ -1,0 +1,55 @@
+Reflections for Lesson 1
+
+
+Q.How did viewing a diff between two versions help you spot the bug?
+————————————————————————————————
+Diff shows changes in codes between two files easily with line numbers.
+It shortens the time for fixing bugs.
+
+
+Q.How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+————————————————————————————————
+I can restore the changes and restore the codes if needed easily. 
+I can have a better management over the codes.
+I can save time on creating manual copies.
+
+Q.What do you think are the pros and cons of manually choosing when to create a 
+commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+————————————————————————————————
+Pros:
+-More flexible
+-Easier to find and understand
+Cons:
+-Risk of forgetting to commit changes
+-A clear picture of changes required is needed
+
+
+Q.Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+————————————————————————————————
+Systems are designed for different purposes.
+
+Git is designed for programming with multiple interrelated files,
+which changes in one file may affect and other files and cause errors unexpectedly.
+
+Other version control systems are not designed for programming,
+and they are mainly for managing separate files only.
+
+
+Q.How can you use the commands git log and git diff to view the history of files?
+————————————————————————————————
+Running git log will show a list of the recent commits with information about them, including commit IDs. 
+
+Running git diff followed by two commit IDs will compare the two versions of the code in those commits.
+
+
+Q.How might using version control make you more confident to make changes that could break something?
+————————————————————————————————
+I can always go back to the previous version with no breaks.
+I can compare commits to find out lines that cause the breaks.
+I can try to make big changes without fear of breaking everything.
+
+
+Q.Now that you have your workspace set up, what do you want to try using Git for?
+————————————————————————————————
+For saving versions of my files, like this one.
+
