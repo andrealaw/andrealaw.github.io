@@ -32,7 +32,7 @@
 	// Assign handlers immediately after making the request,
 	// and remember the jqXHR object for this request
 
-	var weatherAPI = "http://api.openweathermap.org/data/2.5/weather?id=1819729&appid=d01271952de2337d65616474665dc5ae";
+	var weatherAPI = "https://api.openweathermap.org/data/2.5/weather?id=1819729&appid=d01271952de2337d65616474665dc5ae";
 	var unitArr = {
 		C: {api: "&units=metric", symbol: " °C", text: "View in Fahrenheit (°F)"},
 		F: {api: "&units=imperial", symbol: " °F", text: "View in Celsius (°C)"}
@@ -60,7 +60,7 @@
     .done(function(json) {
 	    //console.log( "success" );
 	    $location.html(json.name);
-	    $("#icon").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+	    $("#icon").attr("src", "https://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
 	    $temp.html(json.main.temp + '<span class="unit">' + unitArr[unit].symbol + '</span>');
 	    $changeTempUnitButton.html(unitArr[unit].text);
 	    getBackgroundImage();
