@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #5c095c;
+}
+
+/* IMAGES starts */
+.project img,
+.project div.img {
+  width: 250px;
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+img#img-proj-facebook {
+  background-image: url(../images/m/proj/facebook.png);
+}
+img#img-proj-color-game {
+  background-image: url(../images/m/proj/color-game.png);
+}
+img#img-proj-wikipedia-api-app {
+  background-image: url(../images/m/proj/wikipedia-api-app.png);
+}
+img#img-proj-music-playground {
+  background-image: url(../images/m/proj/music-playground.png);
+}
+img#img-proj-firebase {
+  background-image: url(../images/m/proj/firebase.png);
+}
+img#img-proj-frontend {
+  background-image: url(../images/m/proj/prenetics.png);
+}
+img#img-proj-android {
+  background-image: url(../images/m/proj/android.png);
+}
+img#img-proj-han-trainer {
+  background-image: url(../images/m/proj/han-trainer.png);
+}
+img#img-proj-moodle {
+  background-image: url(../images/m/proj/moodle.png);
+}
+/* IMAGES ends */
+
+/* NAV BAR starts */
+#a-navbar {
+  background-color: #52636d;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  transition: 0.3s;
+}
+#a-navbar span {
+  color: white;
+}
+#a-navbar.hide {
+  height: 0;
+  line-height: 0;
+}
+#a-navbar .a-title {
+  font-family: 'Oleo Script', cursive;
+  font-size: 24px;
+  transition: 0.3s;
+}
+#a-navbar.hide .a-title {
+  font-size: 0px;
+}
+.menu.mobile-only {
+  background-color: #52636d;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  top: 60px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.menu.mobile-only.shift {
+  top: 0px;
+}
+
+.menu.mobile-only span {
+  /* font-family: 'Oleo Script', cursive; */
+  font-size: 16px;
+  width: 100%;
+  
+}
+/* NAV BAR ends */
+
+.content {
+}
+
+.section-title {
+  color: rgba(43, 42, 42, 0.8);
+  line-height: 60px;
+  font-size: 20px;
+}
+
+/* PROFILE starts */
+.a-profile {
+  padding-top: 180px; /* 60px + 60px for a-navbar + mobile-only menu */
+  padding-bottom: 70px;
+  /* background-color: #f9f9f9; */
+}
+.a-profile-pic {
+  border-radius: 50%;
+  background-position: center;
+  margin: auto;
+}
+.social {
+  text-align: center;
+}
+.social i {
+  height: 2em;
+  padding: 10px;
+}
+/* PROFILE ends */
+
+/* SKILLS start */
+#a-skills .levels {
+  display: flex;
+
+}
+#a-skills .levels span {
+  
+}
+#a-skills ul.types li {
+  margin: 5px 5px 5px 0px;
+  border: solid 1px #52636d;
+  border-radius: 5px;
+  line-height: 45px;
+  background-color: beige;
+  padding: 5px;
+}
+#a-skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+#a-skills ul li {
+  background-color: yellow;
+  margin: 5px 10px 5px 0px;
+  padding: 5px;
+}
+/* SKILLS ends */
+
+/* PROJECT starts */
+.year {
+  text-align: center;
+  color: #cacaca;
+  font-size: 20px;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0px;
+}
+div.project:nth-child(2n){
+  background-color: #f9f9f9;
+}
+.project p{
+  width: 80%;
+  text-align: center;
+}
+.project .buttons {
+  height: 50px;
+  line-height: 50px;
+}
+.project .buttons span {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  margin: 0 2px;
+}
+.project .buttons .demo {
+  background-color: #0d6ec3;
+}
+.project .buttons .source {
+  background-color: #0dc36e;
+}
+.project .buttons .visit {
+  background-color: #b83108;
+}
+.footer {
+  text-align: center;
+  padding: 20px 15px;
+  color: white;
+  background-color: #52636d;
+}
+/* PROJECT ends */
+
+/* CONTACT starts */
+div.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #52636d;
+}
+div.contact p {
+  width: 70%;
+}
+/* CONTACT ends */
+
+/* For min screen size: 768px */
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+  #a-navbar {
+    display: flex;
+    justify-content: center;
+  }
+  #a-navbar.shift {
+    height: 40px;
+    line-height: 40px;
+  }
+  #a-navbar .a-title {
+    float: left;
+  }
+  #a-navbar.shift .a-title {
+    font-size: 20px;
+  }
+  #a-navbar .menu {
+    float: right;
+  }
+  #a-navbar .menu span {
+    padding: 0 20px 0 20px;
+  }
+  #profile.in,
+  #projects.in,
+  #contact.in {
+
+  }
+  .menu.mobile-only {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+/* Override everything */
+.hidden {
+  display: none;
+}
+div.project,
+div.contact {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

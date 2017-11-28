@@ -4,32 +4,242 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Andrea Law's Page</title>
+	<title>Andrea Law's Portfolio</title>
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">  
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">  
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+	<!-- iOS icons -->
+	<link href="apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+	<link href="apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" />
+	<link href="apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Oleo+Script:400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<!-- JS -->
+	<script src="assets/js/index.js"></script>
 </head>
 <body>
-	<div class="container">
-		<h1>Andrea Law</h1>
-		<p>A developer with a business sense.</p>
-		<h2>Past projects</h2>
-		<ul>
-			<li>Web app for managing Facebook Pages</li>
-			<li><a href="https://prenetics.com/" target="_blank">Prenetics.com</a></li>
-			<li>Fast web app prototyping for startups</li>
-			<li>and more ...</li>
-		</ul>
-		<h2>Web Apps for Fun</h2>
-		<ul>
-      <li><a href="practice/Web%20Apps/Simple/color-guessing-game/" target="_blank">Color Guessing Game</a></li>
-			<li><a href="practice/Web%20Apps/Simple/patatap/" target="_blank">Patatap Music Playground</a></li>
-			<li><a href="practice/Web%20Apps/APIs/wikipedia-api-app/" target="_blank">Wikipedia Quick Search</a></li>
-		</ul>
-		<h2>ReactJS Apps</h2>
-		<ul>
-			<li>ageteller</li>
-		</ul>	
-			
+	<div id="a-navbar">
+		<div class="container">
+			<span class="a-title">Andrea Law</span>
+			<div class="menu">
+					<a href="#sectionProfile"><span>Profile</span></a>
+					<a href="#sectionProjects"><span>Projects</span></a>
+					<a href="#sectionContact"><span>Contact</span></a>
+			</div>
+		</div>
+	</div>
+	<div id="mobileMenu" class="menu mobile-only">
+		<span>Profile</span>
+		<span>Projects</span>
+		<span>Contact</span>
+	</div>
+	<div class="content">
+		<div id="sectionProfile" class="a-profile">
+			<div class="a-profile-pic"></div>
+			<h1>Andrea Law</h1>
+			<p>A Developer who enjoys learning</p>
+			<div class="social">
+				<a href="https://github.com/andrealaw" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="https://www.linkedin.com/in/andrea-law/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				<a href="mailto:hkandrealaw@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="https://www.facebook.com/hkandrealaw" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			</div>
+			<div class="self-introduction hidden">
+				<p>
+					Andrea has a strong passion for good design and great UX and interned at an international design studio to learn the industrial practice. She formed her startup at 24 and had a number of experience in idea validation, fast prototyping, UX enhancement, pitching and problem solving.
+				</p>
+				<p>
+					Her career goal is to be a strong software engineer in 5 years and work with the talented software engineers.
+				</p>
+				<p>
+						She is looking for exciting job opportunities to join a team of enthusiatic and experienced programmers while she is doing her Master in Computing at the University of Melbourne starting from Feb 2018.
+				</p>
+			</div>
+		</div>
+		<div id="a-skills" class="hidden">
+			<h1 class="section-title">Skills</h1>
+			<div class="levels">
+				<span>Web</span>
+				<span>Intermediate</span>
+				<span>Expert</span>
+			</div>
+			<ul class="types">
+				<li>All</li>
+				<li>Frontend</li>
+				<li>Backend</li>
+				<li>DevTools</li>
+				<li>Frameworks</li>
+				<li>Marketing</li>
+				<li>Data</li>
+				<li>Design</li>
+				<li>Admin</li>
+			</ul>
+			<ul>
+				<li id="skillHTML">HTML5</li>
+				<li id="skillCSS">CSS3</li>
+				<li id="skillOOCSS">OOCSS</li>
+				<li id="skillSCSS">SCSS</li>
+				<li id="skilljQuery">jQuery</li>
+				<li id="skillJSES5">JS(ES5)</li>
+				<li id="skill">Pug</li>
+				<li id="skill">EJS</li>
+				<li id="skill">React</li>
+			</ul>
+			<ul>
+				<li id="skill">JS(ES6)</li>
+				<li id="skill">Webpack</li>
+				<li id="skill">NodeJS</li>
+				<li id="skill">ExpressJS</li>
+				<li id="skill">PassportJS</li>
+				<li id="skill">RequestRequireJS</li>
+			</ul>
+			<ul>
+				<li id="skill">Google Developer Tool</li>
+				<li id="skill">Android Studio</li>
+				<li id="skill">Genymotion</li>
+				<li id="skill">Xcode</li>
+				<li id="skill">Github</li>
+				<li id="skill">Linux Command</li>
+				<li id="skill">Virtual Box</li>
+				<li id="skill">docker</li>
+			</ul>
+			<ul>
+				<li id="skill">Bootstrap</li>
+				<li id="skill">Semantic UI</li>
+				<li id="skill">Joomla</li>
+				<li id="skill">Wordpress</li>
+				<li id="skill">Magento</li>
+				<li id="skill">Dreamweaver</li>
+			</ul>
+			<ul>
+				<li id="skill">Java</li>
+				<li id="skill">Python</li>
+				<li id="skill">C++</li>
+				<li id="skill">Unity3D</li>
+				<li id="skill">Arduino Uno</li>
+			</ul>
+			<ul>
+				<li id="skill">Google Analytics</li>
+				<li id="skill">Google Adword</li>
+				<li id="skill">Facebook Page Ads</li>
+				<li id="skill">Facebook JavaScript SDK</li>
+				<li id="skill">Facebook Graph API</li>
+			</ul>
+			<ul>
+				<li id="skill">Contentful</li>
+				<li id="skill">Firebase Database</li>
+				<li id="skill">MongoDB</li>
+				<li id="skill">SQL</li>
+				<li id="skill">MS Access</li>
+				<li id="skill">Oracle Database 11g/12c</li>
+				<li id="skill">Oracle Data Integrator 12c</li>
+			</ul>
+			<ul>
+				<li id="skill">Balsamaq</li>
+				<li id="skill">Invision</li>
+				<li id="skill">Axure Pro</li>
+				<li id="skill">Sketch</li>
+				<li id="skill">Adobe Illustrator</li>
+				<li id="skill">Adobe Photoshop</li>
+				<li id="skill">Adobe Audition</li>
+				<li id="skill">Adobe Premiere</li>
+				<li id="skill">Adobe Flash</li>
+			</ul>
+			<ul>
+				<li id="skill">MS Word</li>
+				<li id="skill">MS Excel</li>
+				<li id="skill">MS Powerpoint</li>
+				<li id="skill">MS Project</li>
+				<li id="skill">Basecamp</li>
+				<li id="skill">JIRA</li>
+				<li id="skill">Slack</li>
+				<li id="skill">Vtiger</li>
+			</ul>			
+		</div>
+		<div id="sectionProjects">
+			<h1 class="section-title hidden">Projects</h1>
+			<div class="project">
+				<img id="img-proj-frontend">
+				<h2>Front End Development</h2>
+				<p>A bilingual website for Prenetics Limited, a million-dollar DNA-testing company.</p>
+				<div class="buttons">
+					<a href="https://youtu.be/z3VZs-iOX3w" target="_blank"><span class="demo">Demo (Mobile)</span></a>
+					<a href="https://prenetics.com/" target="_blank"><span class="visit">Visit</span></a>
+				</div>
+			</div>
+			<div class="project">
+				<img id="img-proj-facebook">
+				<h2>Facebook API</h2>
+				<p>A web app built with NodeJS, Facebook JavaScript SDK, and Facebook Graph API for managing Facebook posts as a Page</p>
+				<div class="buttons">
+					<a href="https://youtu.be/lvbihbTFVx4" target="_blank"><span class="demo">Mobile</span></a>
+					<a href="https://youtu.be/XmGGJ6Z2So8" target="_blank"><span class="demo">Tablet</span></a>
+					<a href="https://youtu.be/6dwN_S4R5D4" target="_blank"><span class="demo">Desktop</span></a>
+				</div>
+			</div>
+			<div class="project">
+				<img id="img-proj-color-game">
+				<h2>Colour Guessing Game</h2>
+				<p>A Web-based mini game for guessing the colour based on RGB colour code.</p>
+				<div class="buttons">
+					<a href="practice/Web%20Apps/color-guessing-game/" target="_blank">
+						<span class="demo">Demo</span>
+					</a>
+				</div>
+			</div>
+			<div class="project">
+				<img id="img-proj-music-playground">
+				<h2>Patatap Music Playground</h2>
+				<p>A Web-based mini game allowing users to play sounds and add animations on the screen by keyword press.</p>
+				<div class="buttons"><a href="practice/Web%20Apps/patatap/" target="_blank"><span class="demo">Demo (Desktop only)</span></a></div>
+			</div>
+			<div class="project">
+				<img id="img-proj-wikipedia-api-app">
+				<h2>Wikipedia Quick Search</h2>
+				<p>A website built with Wikipedia API that enables users to search for Wikipedia pages by keywords.</p>
+				<div class="buttons"><a href="practice/Web%20Apps/wikipedia-api-app/" target="_blank"><span class="demo">Demo</span></a></div>
+			</div>
+			<div class="project">
+				<img id="img-proj-firebase">
+				<h2>Google Firebase</h2>
+				<p>CRUD APIs for a to-do list app built with nodeJS, Google Firebase Admin SDK and Firebase database.</p>
+				<div class="buttons"><a href="practice/Web%20Apps/todo-list"><span class="source">Source</span></a></div>
+			</div>
+			<!-- <div class="project hidden">
+				<img id="img-proj-moodle">
+				<h2>Blackboard System</h2>
+				<p>An online blackboard system built with Moodle for schools and teachers to manage students' performance.</p>
+				<div class="buttons"><span class="demo">Demo</span></div>
+			</div> -->
+			<div class="project">
+				<img id="img-proj-han-trainer">
+				<h2>Native Android App</h2>
+				<p>An Android app prototype built with Java and Android Studio for teaching Chinese Mandarin.</p>
+				<div class="buttons"><a href="https://sites.google.com/site/andreanclaw/" target="_blank"><span class="source">UI</span></a></div>
+			</div>
+		</div>
+		<div id="sectionContact" class="contact">
+			<p>Feel free drop me a line for exciting career opportunities</p>
+			<div class="social">
+					<a href="https://github.com/andrealaw" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/andrea-law/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+					<a href="mailto:hkandrealaw@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/hkandrealaw" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				</div>
+		</div>
+		<div class="footer">
+			<p>
+				Made with fries and ketchup &#10084;
+			</p>
+			<p>
+				Copyright 2017 © Andrea Law
+			</p>
+		</div>
 	</div>
 </body>
 </html>
