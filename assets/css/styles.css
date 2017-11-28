@@ -62,12 +62,12 @@ img#img-proj-moodle {
   width: 100%;
   transition: 0.3s;
 }
-#a-navbar span,
-#mobileMenu span {
+#a-navbar span {
   color: white;
 }
 #mobileMenu a {
   flex-grow: 1;
+  color: white;
 }
 #a-navbar.hide {
   height: 0;
