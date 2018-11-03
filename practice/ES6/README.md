@@ -13,10 +13,18 @@
 - We should avoid using "for loop" because many logics on a single line of code can create challenges for other developers to read and understand
 - forEach helper passes the element in an array to the Iterator function
 - Reason for using forEach:
-...1.Reduce the amount of code
-...1.Reduce the logic written
+  1. Reduce the amount of code
+  2. Reduce the logic written
 
 ## map.js - The 'map' helper
 - Use frequently in client-side frameworks like Angular and React
 - Commonly used for printing a list of items on the screens, e.g. blog posts, comments
+
+## filter.js - The 'filter' helper
+- Common use cases: 
+  1. Filter out a search on a search page, e.g. size and colour of shoes, 
+  2. Filter out categories of items selling on a supermarket's online store
+  3. Filter out comments for a specific post
+  4. Find the rejected values and print them
+
 
