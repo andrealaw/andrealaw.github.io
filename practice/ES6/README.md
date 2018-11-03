@@ -16,4 +16,7 @@
 ...1.Reduce the amount of code
 ...1.Reduce the logic written
 
+## map.js - The 'map' helper
+- Use frequently in client-side frameworks like Angular and React
+- Commonly used for printing a list of items on the screens, e.g. blog posts, comments
 
