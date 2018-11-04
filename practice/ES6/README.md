@@ -27,4 +27,11 @@
   3. Filter out comments for a specific post
   4. Find the rejected values and print them
 
+## find.js - The 'find' helper
+- Replace the iterator functions
+- Do not need to use a "break" to stop the loop
+- Find and stop at the first matched item
+- Use this to look for a particular object
+
+
 
