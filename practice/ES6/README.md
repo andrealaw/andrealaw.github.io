@@ -33,5 +33,14 @@
 - Find and stop at the first matched item
 - Use this to look for a particular object
 
+## every.js - The 'every' helper
+- Return true if **all** items in an array meets the condition
+- Else return false
+- Save time on creating boolean variables and write a for loop to loop through the arrays
+
+## some.js - The 'some' helper
+- Return true if **any** items in an array meets the condition
+- Else return false
+- Save time on creating boolean variables and write a for loop to loop through the arrays
 
 
