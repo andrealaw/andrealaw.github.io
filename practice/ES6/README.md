@@ -43,4 +43,8 @@
 - Else return false
 - Save time on creating boolean variables and write a for loop to loop through the arrays
 
-
+## reduce.js - The 'reduce' helper
+- Use it to accumulate some values
+- Can be rewritten to count matched pairs, e.g. parenthesis
+- Can combine with othe helper functions to remove duplicated values
+- Can return an object/ a value / an array
