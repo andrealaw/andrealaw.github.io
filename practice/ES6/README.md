@@ -48,3 +48,10 @@
 - Can be rewritten to count matched pairs, e.g. parenthesis
 - Can combine with othe helper functions to remove duplicated values
 - Can return an object/ a value / an array
+
+## const-let.js - replace the use of var
+-use const and let instead of var for declaring variables
+-use const for variables with constant values
+-use let for variables with changing values
+-values of const cannot be changed once set
+-they are used to make the purpose of the variables clear to developers
