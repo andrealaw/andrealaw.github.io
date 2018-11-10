@@ -55,3 +55,8 @@
 -use let for variables with changing values
 -values of const cannot be changed once set
 -they are used to make the purpose of the variables clear to developers
+
+## template-string.js
+-refactor strings with variables using back tags
+-e.g. `My name is ${firstName} ${lastName}`;
+-the purpose is to make it simple to understand
