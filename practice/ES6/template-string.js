@@ -44,7 +44,7 @@ const username = "mary";
 const data = '{"device_id":"' + device_id + '","guid":"' + guid + '","username":"' + username + '","}';
 
 // ES6 way:
-// Quote in back tags
+// Quote in back ticks
 // replace quotes and plus signs
 const data = '{"device_id":"${device_id}","guid":"${guid}","username":"${username}","}';
 
