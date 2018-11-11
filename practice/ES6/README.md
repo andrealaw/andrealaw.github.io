@@ -70,3 +70,8 @@
 -compact the code with ES6
 -remove ": function" in the value of a key in an object
 -remove ": valueName" if both the key and its value in an object share the same name
+
+## default-function-arguments.js
+-for writing less code
+-use to reassign values to the arguments when their values are undefined
+-note that "undefined" is not equal to "null"
