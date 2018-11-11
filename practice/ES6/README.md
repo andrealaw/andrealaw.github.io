@@ -60,3 +60,13 @@
 -refactor strings with variables using back tags
 -e.g. `My name is ${firstName} ${lastName}`;
 -the purpose is to make it simple to understand
+
+## arrow-functions.js
+-refactor the functions with 
+-(1)the function keyword removed and 
+-(2)a fat arrow => added to it before the curly braces
+
+## enhanced-object-literals.js
+-compact the code with ES6
+-remove ": function" in the value of a key in an object
+-remove ": valueName" if both the key and its value in an object share the same name
