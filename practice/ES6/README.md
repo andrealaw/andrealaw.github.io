@@ -75,3 +75,9 @@
 -for writing less code
 -use to reassign values to the arguments when their values are undefined
 -note that "undefined" is not equal to "null"
+
+## rest-and-spread-operator.js
+-the rest operator is used for refering to all argument inputs, and give them a name as an array
+-e.g. function someName(...items){}
+-the spread operator is for combining arrays and elements into a single array in the statements
+-e.g. ['apple', ...fruitsToBuy];
