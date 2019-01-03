@@ -238,10 +238,12 @@
 			<p>
 				Made with fries and ketchup &#10084;
 			</p>
-			<p>
-				Copyright 2018 © Andrea Law
-			</p>
+			<p id="copyright"></p>
 		</div>
 	</div>
+
+	<script>
+			document.getElementById("copyright").innerHTML = "Copyright " + new Date().getFullYear() + " © Andrea Law";
+		</script>
 </body>
 </html>
