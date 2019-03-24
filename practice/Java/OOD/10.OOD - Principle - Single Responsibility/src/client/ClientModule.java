@@ -11,7 +11,7 @@ public class ClientModule {
 		Employee peggy = new Employee(1, "peggy", "accounting", true);
 		ClientModule.hireNewEmployee(peggy);
 		
-		printEmployeeReport(peggy);
+		printEmployeeReport(peggy, FormatType.CSV);
 
 	}
 	
@@ -25,8 +25,8 @@ public class ClientModule {
 		employeeDao.deleteEmployee(employee);
 	}
 	
-	public static void printEmployeeReport(Employee employee) {
-		EmployeeReportFormatter formatter = new EmployeeReportFormatter(employee, FormatType.CSV);
+	public static void printEmployeeReport(Employee employee, FormatType formatType) {
+		EmployeeReportFormatter formatter = new EmployeeReportFormatter(employee, formatType);
 		formatter.getFormattedEmployee();
 	}
 
