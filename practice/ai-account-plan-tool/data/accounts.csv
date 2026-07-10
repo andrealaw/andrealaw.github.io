@@ -1,0 +1,6 @@
+account_id,account_name,segment,industry,region,owner,renewal_date,stage,health_score,arr_band
+A100,Company A,Enterprise,Healthcare,US East,Andrea Law,2026-09-22,Onboarding,62,$500k-$1M
+A200,Company B,Enterprise,Financial Services,Australia,Andrea Law,2026-08-19,Expansion,54,$1M-$2M
+A300,Company C,Mid-market,Retail,US West,Andrea Law,2027-01-30,Adopted,83,$250k-$500k
+A400,Company D,Startup,AI Research,US Central,Andrea Law,2026-10-05,Pilot,71,$100k-$250k
+A500,Company E,Enterprise,Manufacturing,Australia,Andrea Law,2026-07-28,Stabilization,48,$500k-$1M

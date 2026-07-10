@@ -1,0 +1,8 @@
+account_id,date,meeting_type,summary,commitments,risks
+A100,2026-07-03,Onboarding review,"Security and ML teams aligned on pilot scope but need RBAC decision before go-live","TAM to provide readiness checklist; customer to nominate admin owners","Access model unclear for regulated workloads"
+A100,2026-04-08,Executive check-in,"Sponsor wants measurable reduction in platform onboarding time","Prepare value baseline before QBR","Executive value narrative not yet quantified"
+A200,2026-07-05,Technical review,"AI platform team is growing usage but finance is challenging idle cost","Create cost/adoption narrative and review right-sizing options","Renewal risk if FinOps concern is not resolved"
+A200,2026-03-18,QBR,"Customer saw adoption growth but requested stronger cost visibility","Follow up with finance dashboard proposal","Expansion blocked by budget scrutiny"
+A300,2026-06-30,QBR,"Customer is satisfied and wants to onboard two additional product teams","Prepare expansion success plan","Need training capacity for new teams"
+A400,2026-07-04,Pilot review,"Founder wants a simple path from pilot to repeatable self-service environments","Define pilot exit criteria","Small team needs lightweight governance"
+A500,2026-07-02,Incident review,"Rollout confidence dropped after repeated environment failures","Create stabilization plan and executive recovery update","Renewal at risk if reliability story does not improve"

@@ -1,0 +1,9 @@
+account_id,ticket_id,severity,status,age_days,theme,customer_impact
+A100,SUP-1842,P1,Open,5,RBAC onboarding,"Delayed production readiness for regulated data teams"
+A100,SUP-1760,P2,In Progress,14,Training,"Admins unsure how to delegate access safely"
+A200,SUP-1888,P1,Open,9,Cost visibility,"Customer cannot explain idle infrastructure cost to finance"
+A200,SUP-1810,P2,Open,21,Performance,"Provisioning times spike during ML experiment bursts"
+A300,SUP-1501,P3,Resolved,3,Documentation,"Minor confusion in internal onboarding guide"
+A400,SUP-1870,P2,Open,6,Quota management,"Research teams need clearer guardrails before pilot expansion"
+A500,SUP-1902,P0,Open,2,Service reliability,"Executive sponsor paused rollout after repeated environment failures"
+A500,SUP-1822,P1,In Progress,18,Change management,"Site teams need a safer migration and rollback plan"

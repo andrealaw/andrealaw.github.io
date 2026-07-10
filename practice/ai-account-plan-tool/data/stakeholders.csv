@@ -1,0 +1,13 @@
+account_id,name,role,influence,sentiment,last_contact_date
+A100,Maya Chen,VP Platform Engineering,High,Supportive,2026-07-03
+A100,David Patel,Security Lead,Medium,Cautious,2026-06-28
+A100,Grace Wilson,ML Operations Manager,Medium,Neutral,2026-06-22
+A200,Oliver Brown,Head of Infrastructure,High,Cautious,2026-07-01
+A200,Sofia Ahmed,FinOps Lead,High,Concerned,2026-06-18
+A200,Noah Smith,AI Platform Lead,Medium,Supportive,2026-07-05
+A300,Ethan Martinez,Director of Data Platforms,High,Supportive,2026-07-07
+A300,Chloe Nguyen,Product Analytics Lead,Medium,Supportive,2026-06-30
+A400,Priya Kapoor,Founder and CTO,High,Supportive,2026-07-04
+A400,James Lee,Research Engineering Manager,Medium,Neutral,2026-06-26
+A500,Amelia Taylor,Group CIO,High,Concerned,2026-06-21
+A500,Liam Walker,Platform Operations Lead,High,Cautious,2026-07-02
