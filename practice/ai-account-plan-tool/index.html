@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Account Plan Tool for TAMs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand-lockup">
+        <div class="brand-mark">AI</div>
+        <div>
+          <p class="brand-name">Andrea Law AI</p>
+          <p class="brand-subtitle">Account Plan Tool</p>
+        </div>
+      </div>
+      <nav class="nav-stack">
+        <button class="nav-button active" data-view="dashboard">Dashboard</button>
+        <button class="nav-button" data-view="account">Account 360</button>
+        <button class="nav-button" data-view="plan">Success Plan</button>
+        <button class="nav-button" data-view="workbench">AI Workbench</button>
+        <button class="nav-button" data-view="import">Import Center</button>
+      </nav>
+      <div class="privacy-panel">
+        <p class="eyebrow">Local-first</p>
+        <p>No customer data leaves this browser unless you copy or export it.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Technical Account Management</p>
+          <h1>AI Account Plan Tool</h1>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-label" for="accountSearch">Search accounts</label>
+          <input id="accountSearch" type="search" placeholder="Search account, region, owner">
+          <button id="loadSampleBtn" class="button secondary" type="button">Load sample</button>
+          <button id="exportJsonBtn" class="button" type="button">Export JSON</button>
+        </div>
+      </header>
+
+      <section id="dashboardView" class="view active" aria-labelledby="dashboardTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Portfolio view</p>
+            <h2 id="dashboardTitle">Customer health, risk, and expansion signals</h2>
+          </div>
+          <p class="section-note">Fictional sample data for a technical infrastructure TAM workflow.</p>
+        </div>
+        <div id="metricGrid" class="metric-grid"></div>
+        <div class="dashboard-layout">
+          <section>
+            <div class="section-heading compact">
+              <h3>Accounts</h3>
+              <p id="accountCount" class="section-note"></p>
+            </div>
+            <div id="accountCards" class="account-grid"></div>
+          </section>
+          <aside class="side-panel">
+            <div class="section-heading compact">
+              <h3>Next best actions</h3>
+            </div>
+            <div id="nextActions" class="action-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="accountView" class="view" aria-labelledby="accountTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Account 360</p>
+            <h2 id="accountTitle">Customer context and operational readiness</h2>
+          </div>
+          <select id="accountSelect" class="select"></select>
+        </div>
+        <div id="accountDetail" class="detail-grid"></div>
+      </section>
+
+      <section id="planView" class="view" aria-labelledby="planTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Success Plan Builder</p>
+            <h2 id="planTitle">Living account plan and QBR summary</h2>
+          </div>
+          <button id="downloadMarkdownBtn" class="button" type="button">Export Markdown</button>
+        </div>
+        <div id="successPlan" class="plan-surface"></div>
+      </section>
+
+      <section id="workbenchView" class="view" aria-labelledby="workbenchTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">AI Workbench</p>
+            <h2 id="workbenchTitle">Grounded prompts from local account data</h2>
+          </div>
+          <div class="inline-controls">
+            <select id="promptType" class="select">
+              <option value="account-plan">Account plan</option>
+              <option value="qbr">QBR brief</option>
+              <option value="exec-email">Executive email</option>
+              <option value="risk-review">Risk review</option>
+            </select>
+            <button id="generatePromptBtn" class="button" type="button">Generate</button>
+            <button id="copyPromptBtn" class="button secondary" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="workbench-grid">
+          <div class="callout">
+            <p class="eyebrow">Approved AI only</p>
+            <p>Use fictional, anonymized, approved enterprise AI, internal LLMs, or local tools for sensitive data.</p>
+          </div>
+          <textarea id="promptOutput" spellcheck="false"></textarea>
+        </div>
+      </section>
+
+      <section id="importView" class="view" aria-labelledby="importTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Import and update</p>
+            <h2 id="importTitle">CSV snapshots, local storage, and team handoff</h2>
+          </div>
+          <button id="clearDataBtn" class="button danger" type="button">Clear local data</button>
+        </div>
+        <div class="import-grid">
+          <div class="import-card">
+            <h3>CSV imports</h3>
+            <div id="csvImporters" class="import-list"></div>
+          </div>
+          <div class="import-card">
+            <h3>JSON handoff</h3>
+            <div class="file-row">
+              <label for="jsonImport">Import exported workspace</label>
+              <input id="jsonImport" type="file" accept=".json,application/json">
+            </div>
+            <button id="downloadTemplatesBtn" class="button secondary" type="button">Download CSV templates</button>
+            <button id="resetSampleBtn" class="button secondary" type="button">Reset sample data</button>
+          </div>
+          <div class="import-card wide">
+            <h3>Team operating model</h3>
+            <div class="workflow-steps">
+              <div><span>1</span><p>Export weekly CRM, support, usage, and meeting-note snapshots.</p></div>
+              <div><span>2</span><p>Import CSVs locally and review account risk, adoption, and expansion signals.</p></div>
+              <div><span>3</span><p>Export Markdown plans into shared docs for QBRs and customer reviews.</p></div>
+              <div><span>4</span><p>Use company-approved AI only when customer data is sensitive.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

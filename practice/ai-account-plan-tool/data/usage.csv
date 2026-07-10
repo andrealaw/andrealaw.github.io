@@ -1,0 +1,6 @@
+account_id,tenant_envs,active_users,provisioning_time_minutes,weekly_active_projects,gpu_or_ai_workload_signal
+A100,12,68,18,9,Yes
+A200,16,94,42,13,Yes
+A300,7,42,12,6,No
+A400,4,18,25,5,Yes
+A500,9,55,58,7,No
